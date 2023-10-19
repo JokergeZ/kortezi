@@ -1,0 +1,22 @@
+from collections import namedtuple
+Student = namedtuple('Student', 'name age grade city')
+students = (
+   Student('Сергей', '34', 4.5, 'Москва'),
+   Student('Александр', '17', 3.8, 'Новосибирск'),
+   Student('Владимир', '22', 5, 'Москва'),
+   Student('Габриил', '24', 4.6, 'Гелинджиг'),
+   Student('Николай', '19', 4.2, 'Санкт-Петербург'),
+   Student('Владислав', '20', 3.9, 'Хабаровск'),
+   Student('Иван', '21', 4.8, 'Грозный')
+)
+def j(students):
+   z = 0
+
+   for student in students:
+       z += student.grade
+   sss = z / len(students)
+
+   f = [student.name for student in students if student.grade >= sss]
+   print('Ученики ', ', '.join(f), ' в этом семестре хорошо учатся!')
+
+j(students)
