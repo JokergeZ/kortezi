@@ -1,0 +1,8 @@
+def sieve(sss):
+    z = []
+    [z.append(item) for item in reversed(sss) if item not in z]
+    return tuple(z)
+print(sieve([0, 2, 3, 2, 8, 7]))
+print(sieve([2, 6, 7, 2, 3, 4, 5, 1, 9, 0]))
+print(sieve((1, 2, 10, 6, 1, 9, 6, 4, 6, 8)))
+print(sieve((1, 9, 5, 10, 2, 9, 3, 12,)))
